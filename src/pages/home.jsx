@@ -1,23 +1,20 @@
-import React from "react";
 import HeroArea from "../component/home/hero";
 import Category from "../component/home/category";
 import Subscribe from "../component/home/subscribe";
-import {  FaWhatsapp } from "react-icons/fa";
+import WhatsAppSection from "../component/home/whatsapp-message";
 
 const Home = () => {
   return (
     <div className="relative">
       <HeroArea />
       <Category />
-      {/* right side */}
-      <div className="absolute right-0 bottom-3">
-        <div className="bg-green-500 p-2 rounded-full inline-block text-white ">
-          <FaWhatsapp className="h-10 w-10" />
-        </div>
+      {/* Right side */}
+      <div className="absolute right-12 -bottom-[66px] z-10">
+        <WhatsAppSection />
       </div>
-      {/* left side */}
-      <div className="absolute bottom-0 -left-14">
-        <Subscribe/>
+      {/* Left side */}
+      <div className="absolute -bottom-16 left-0 z-10">
+        <Subscribe />
       </div>
     </div>
   );

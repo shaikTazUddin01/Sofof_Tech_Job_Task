@@ -12,8 +12,11 @@ const images = [img1, img2, img1, img2];
 const HeroArea = () => {
   return (
     <div className="w-full ">
-        <h1 className="text-3xl my-4">Home</h1>
-      <Swiper
+      <div className="max-w-[712px] mx-auto">
+        <h1 className="text-[40px] tracking-wider font-bold -mt-6 text-[#222222]">Home</h1>
+      </div>
+     <div className="mt-6">
+     <Swiper
         spaceBetween={10}
         slidesPerView={2.5}
         centeredSlides={true}
@@ -27,11 +30,12 @@ const HeroArea = () => {
             <img
               src={img}
               alt={`slider-${idx}`}
-              className="rounded-xl w-full h-auto object-cover"
+              className="rounded-xl w-full h-[200px] object-cover"
             />
           </SwiperSlide>
         ))}
       </Swiper>
+     </div>
     </div>
   );
 };

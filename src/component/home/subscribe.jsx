@@ -1,34 +1,24 @@
-import { FaCheckCircle, FaStar } from "react-icons/fa";
-
+import { CheckmarkCircleIcon, StarIcon } from "../../assets/icons/icons";
 
 const Subscribe = () => {
   return (
-    <div
-      className=" w-80  bg-gradient-to-r from-purple-700 to-purple-500 text-white relative flex flex-col justify-between 
-      "
-    >
-      <div className="  p-6">
-        <h2 className="text-2xl font-bold mb-2 flex items-center">
-          <FaStar className="text-yellow-400 text-3xl mr-2" />
-          Premium
-        </h2>
-        <p className="text-base leading-relaxed mb-5">
-          We have subscription,
-          <br />
-          Do you want to subscribe?
-        </p>
-        <div className="card-actions justify-center">
-          <button
-            className="
-                      btn btn-outline btn-info 
-                      text-white border-white border-opacity-30
-                      hover:bg-white hover:text-purple-700 hover:border-white hover:border-opacity-0
-                      normal-case 
-                      flex items-center justify-center
-                  "
-          >
-            <FaCheckCircle className="mr-2" /> Subscribe Now
-          </button>
+    <div className="w-[305px] h-[160px] bg-gradient-to-r from-[#65358B] to-[#CFB4E4] text-white relative flex flex-col justify-between px-12 py-6 rounded-r-2xl">
+      <span className="flex items-center gap-1">
+        <StarIcon />
+        <h5 className="text-xl font-medium">Premium</h5>
+      </span>
+
+      <p className="text-[16px] font-medium tracking-wider">
+        We have subscription, <br />
+        Do you want to subscribe?
+      </p>
+
+      <div className="mt-1">
+        <div className="inline-block">
+          <span className="text-white bg-gradient-to-r from-[#65358A] to-[#2B153C] text-sm rounded-full flex items-center gap-1 py-[5px] px-[14px] tracking-wider">
+            <CheckmarkCircleIcon />
+            <p className="mt-1">Subscribe Now</p>
+          </span>
         </div>
       </div>
     </div>

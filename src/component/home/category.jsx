@@ -1,26 +1,37 @@
-import { FaMosque } from "react-icons/fa";
-import img from "../../assets/live.png";
+import img from "../../assets/category_banner.png";
+import category1 from "../../assets/categories/1.png"
+import category2 from "../../assets/categories/2.png"
+import category3 from "../../assets/categories/3.png"
 
 const Category = () => {
+  const categories = [
+    {
+      id: 1,
+      name: "mosque",
+      img: category1,
+    },
+    {
+      id: 2,
+      name: "mosque",
+      img: category2,
+    },
+    {
+      id: 3,
+      name: "mosque",
+      img: category3,
+    },
+  ];
   return (
     <div className="my-14">
       <div className="flex justify-center items-center">
-        <img src={img} alt="" className="w-[700px]" />
+        <img src={img} alt="" className="w-[712px] h-[152px]" />
       </div>
-      <div className="flex gap-6 justify-center items-center">
-        <div className="rounded-full p-6 border border-[#9c9a9a] flex flex-col justify-center items-center ">
-          <FaMosque className="h-14 w-14" />
-          <p>mosque</p>
-        </div>
-        <div className="rounded-full p-6 border border-[#9c9a9a] flex flex-col justify-center items-center">
-          <FaMosque className="h-14 w-14" />
-          <p>mosque</p>
-        </div>
-        <div className="rounded-full p-6 border border-[#9c9a9a] flex flex-col justify-center items-center">
-          <FaMosque className="h-14 w-14" />
-          <p>mosque</p>
-
-        </div>
+      <div className="flex gap-6 justify-center items-center mt-10">
+        {categories?.map((category) => 
+          <div className=" ">
+            <img src={category?.img} alt={category?.name} className="h-[200px] w-[200px]"/>
+          </div>
+        )}
       </div>
     </div>
   );
