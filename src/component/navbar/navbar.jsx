@@ -1,49 +1,60 @@
-import React from 'react';
+import React from "react";
+import { FaCaretDown } from "react-icons/fa";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { RiMenu2Fill } from "react-icons/ri";
 
 const Navbar = () => {
-    return (
-        <div className="navbar bg-base-100 shadow-sm">
+  return (
+    <div className="bg-base-100 shadow-md h-20 px-4 md:px-8">
+      <nav className="navbar max-w-[1440px] mx-auto">
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-            </div>
+          <button className="btn btn-ghost btn-circle text-primary-focus bg-primary-content">
+            <RiMenu2Fill className="h-6 w-6" />
+          </button>
+        </div>
+
+        <div className="navbar-center flex flex-col items-center">
+          <div className="text-xl font-bold text-primary-focus">أشطوت</div>
+          <div className="text-sm text-gray-500">Qatara</div>
+        </div>
+
+        <div className="navbar-end gap-3 md:gap-5">
+          <button className="btn btn-ghost btn-circle text-primary-focus bg-primary-content">
+            <IoNotificationsOutline className="h-6 w-6" />
+          </button>
+
+          <div className="dropdown dropdown-end">
+            <label
+              tabIndex={0}
+              className="btn btn-outline btn-sm rounded-full gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 border-gray-200"
+            >
+              <img
+                src="https://flagcdn.com/us.svg"
+                alt="US Flag"
+                className="w-6 h-4 rounded-sm shadow-md"
+              />
+              <span className="text-sm">Eng</span>
+              <FaCaretDown className="h-4 w-4" />
+            </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32"
+            >
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
+                <a>English</a>
               </li>
-              <li><a>Item 3</a></li>
+              <li>
+                <a>العربية</a>
+              </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <button className="btn bg-primary text-white rounded-full px-6 hover:bg-primary-focus">
+            Logout
+          </button>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-        </div>
-      </div>
-    );
+      </nav>
+    </div>
+  );
 };
 
 export default Navbar;

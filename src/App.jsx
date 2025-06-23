@@ -5,10 +5,10 @@ import { Outlet } from 'react-router-dom';
 const App = () => {
   return (
     <div>
-    {/* navbar */}
     <Navbar/>
-    {/* outlet */}
+    <div className='max-w-[1440px] mx-auto'>
     <Outlet/>
+    </div>
     </div>
   );
 };
