@@ -5,7 +5,7 @@
       "details": "330 ml • 20 bottles",
       "price": 50.0,
       "currency": "৳",
-      "imageUrl": "/images/product-cream-purple.png"
+      "imageUrl": "../src/assets/product/product.png"
     },
     {
       "id": "prod002",
@@ -13,7 +13,7 @@
       "details": "330 ml • 20 bottles",
       "price": 50.0,
       "currency": "৳",
-      "imageUrl": "/images/product-cream-purple.png"
+      "imageUrl": "../src/assets/product/product.png"
     },
     {
       "id": "prod003",
@@ -21,6 +21,30 @@
       "details": "330 ml • 20 bottles",
       "price": 50.0,
       "currency": "৳",
-      "imageUrl": "/images/product-cream-purple.png"
+      "imageUrl": "../src/assets/product/product.png"
+    },
+    {
+      "id": "prod004",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "../src/assets/product/product.png"
+    },
+    {
+      "id": "prod005",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "../src/assets/product/product.png"
+    },
+    {
+      "id": "prod006",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "../src/assets/product/product.png"
     }
   ]

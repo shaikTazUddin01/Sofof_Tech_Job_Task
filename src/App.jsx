@@ -5,7 +5,7 @@ import FooterNavBar from "./component/navbar/footerNav";
 
 const App = () => {
   return (
-    <div className="relative h-full grid grid-cols-1">
+    <div className="relative ">
       <Navbar />
       <div className="max-w-[1440px] mx-auto ">
         <Outlet />
