@@ -1,14 +1,18 @@
-import React from 'react';
-import Navbar from './component/navbar/navbar';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import Navbar from "./component/navbar/navbar";
+import { Outlet } from "react-router-dom";
+import FooterNavBar from "./component/navbar/footerNav";
 
 const App = () => {
   return (
-    <div>
-    <Navbar/>
-    <div className='max-w-[1440px] mx-auto'>
-    <Outlet/>
-    </div>
+    <div className="relative h-full grid grid-cols-1">
+      <Navbar />
+      <div className="max-w-[1440px] mx-auto ">
+        <Outlet />
+      </div>
+      <div className="sticky bottom-0">
+      <FooterNavBar/>
+      </div>
     </div>
   );
 };

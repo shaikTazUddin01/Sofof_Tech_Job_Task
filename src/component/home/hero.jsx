@@ -9,7 +9,7 @@ import img2 from "../../assets/slider/2.png";
 
 const images = [img1, img2, img1, img2]; 
 
-const Slider = () => {
+const HeroArea = () => {
   return (
     <div className="w-full ">
         <h1 className="text-3xl my-4">Home</h1>
@@ -36,4 +36,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default HeroArea;
