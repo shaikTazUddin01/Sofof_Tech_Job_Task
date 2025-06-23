@@ -1,0 +1,26 @@
+[
+    {
+      "id": "prod001",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "/images/product-cream-purple.png"
+    },
+    {
+      "id": "prod002",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "/images/product-cream-purple.png"
+    },
+    {
+      "id": "prod003",
+      "name": "5 Cartons",
+      "details": "330 ml • 20 bottles",
+      "price": 50.0,
+      "currency": "৳",
+      "imageUrl": "/images/product-cream-purple.png"
+    }
+  ]
