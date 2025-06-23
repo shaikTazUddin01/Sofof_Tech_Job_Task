@@ -6,6 +6,7 @@ import {
   DownArrowIcon,
   LeftArrowIcon,
 } from "../assets/icons/icons";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
@@ -13,11 +14,17 @@ const Product = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
+  const handleNavigation = () => {
+    window.location.href = "/";
+  };
   return (
     <div className="max-w-[712px] mx-auto px-4">
-      <div className="flex items-center justify-between mb-8">
+      <header className="flex items-center justify-between mb-8">
         <span className="flex gap-4 items-center">
-          <span className="p-4 bg-[#F3EFF6] rounded-full">
+          <span
+            className="p-4 bg-[#F3EFF6] rounded-full cursor-pointer"
+            onClick={handleNavigation}
+          >
             <LeftArrowIcon />
           </span>
           <h1 className="text-[40px] font-bold w-[535px] leading-9">
@@ -32,8 +39,7 @@ const Product = () => {
           </span>
           <DownArrowIcon />
         </button>
-      </div>
-
+      </header>
       <span className="bg-[#222222] text-white rounded-2xl text-[16px] font-medium tracking-wider px-[16px] py-[14px]">
         Providing Water
       </span>

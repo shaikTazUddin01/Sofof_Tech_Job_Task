@@ -4,41 +4,48 @@
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
     },
     {
       "id": "prod002",
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
     },
     {
       "id": "prod003",
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
     },
     {
       "id": "prod004",
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
     },
     {
       "id": "prod005",
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
+
     },
     {
       "id": "prod006",
       "name": "5 Cartons",
       "details": "330 ml • 20 bottles",
       "price": 50.0,
-      "imageUrl": "../src/assets/product/product.png"
+      "imageUrl": "../src/assets/product/product.png",
+      "thumbnailImg": "../src/assets/product/product2.png"
     }
   ]

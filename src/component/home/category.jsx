@@ -1,7 +1,7 @@
 import img from "../../assets/category_banner.png";
-import category1 from "../../assets/categories/1.png"
-import category2 from "../../assets/categories/2.png"
-import category3 from "../../assets/categories/3.png"
+import category1 from "../../assets/categories/1.png";
+import category2 from "../../assets/categories/2.png";
+import category3 from "../../assets/categories/3.png";
 
 const Category = () => {
   const categories = [
@@ -27,13 +27,17 @@ const Category = () => {
         <img src={img} alt="" className="w-[712px] h-[152px]" />
       </div>
       <div className="flex gap-6 justify-center items-center mt-10">
-        {categories?.map((category) => 
+        {categories?.map((category) => (
           <div className=" ">
-            <a href={`/product`}>
-            <img src={category?.img} alt={category?.name} className="h-[200px] w-[200px] rounded-2xl"/>
+            <a href={`/products`}>
+              <img
+                src={category?.img}
+                alt={category?.name}
+                className="h-[200px] w-[200px] rounded-2xl"
+              />
             </a>
           </div>
-        )}
+        ))}
       </div>
     </div>
   );

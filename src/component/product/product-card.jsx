@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        <button className="text-[16px] bg-[#4C4C4C] text-white py-2.5 px-[22px] rounded-full">
+        <button className="text-[16px] bg-[#4C4C4C] hover:bg-[#474747] cursor-pointer text-white py-2.5 px-[22px] rounded-full">
           Add to Cart
         </button>
       </div>
