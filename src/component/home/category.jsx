@@ -29,7 +29,9 @@ const Category = () => {
       <div className="flex gap-6 justify-center items-center mt-10">
         {categories?.map((category) => 
           <div className=" ">
-            <img src={category?.img} alt={category?.name} className="h-[200px] w-[200px]"/>
+            <a href={`/product`}>
+            <img src={category?.img} alt={category?.name} className="h-[200px] w-[200px] rounded-2xl"/>
+            </a>
           </div>
         )}
       </div>
