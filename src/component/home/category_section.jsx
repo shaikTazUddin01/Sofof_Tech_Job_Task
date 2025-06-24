@@ -3,7 +3,7 @@ import category1 from "../../assets/categories/1.png";
 import category2 from "../../assets/categories/2.png";
 import category3 from "../../assets/categories/3.png";
 
-const Category = () => {
+const CategorySection = () => {
   const categories = [
     {
       id: 1,
@@ -22,11 +22,11 @@ const Category = () => {
     },
   ];
   return (
-    <div className="my-14">
+    <div className="my-6">
       <div className="flex justify-center items-center">
         <img src={img} alt="" className="w-[712px] h-[152px]" />
       </div>
-      <div className="flex gap-6 justify-center items-center mt-10">
+      <div className="flex gap-6 justify-center items-center mt-8">
         {categories?.map((category) => (
           <div className=" ">
             <a href={`/products`}>
@@ -43,4 +43,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default CategorySection;

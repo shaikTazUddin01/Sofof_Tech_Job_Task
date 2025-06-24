@@ -8,29 +8,36 @@ import flag from "../../assets/icons/flag.svg";
 const Navbar = () => {
   return (
     <div className="bg-base-100 pt-6 pb-10 px-6 xl:px-12 max-w-[1440px] mx-auto">
-      <nav className="navbar p-0">
-        <div className="navbar-start">
-          <button className="btn btn-ghost btn-circle text-primary-focus bg-[#65358A26]">
+      <nav className="navbar p-0 flex justify-between items-center">
+        <div className="navbar-start flex items-center gap-2">
+          <button className="p-2 rounded-full cursor-pointer bg-[#F3EFF6]">
             <MenuIcon />
           </button>
+          <div className="block lg:hidden">
+            <a href="/">
+              <img src="/logo.svg" alt="Logo" className="h-8 w-16 ml-2" />
+            </a>
+          </div>
         </div>
 
-        <div className="navbar-center flex flex-col items-center">
-          <img src="/logo.svg" alt="Logo" />
+        <div className="navbar-center hidden lg:flex">
+          <a href="/">
+            <img src="/logo.svg" alt="Logo" className="h-10 w-20" />
+          </a>
         </div>
 
-        <div className="navbar-end gap-2">
-          <button className="btn btn-ghost btn-circle text-primary-focus bg-[#F3EFF6]">
+        <div className="navbar-end flex items-center gap-2">
+          <button className="bg-[#F3EFF6] p-2.5 rounded-full hidden sm:inline-flex cursor-pointer">
             <NotificationIcon />
           </button>
 
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end hidden md:inline-flex">
             <label
               tabIndex={0}
-              className="btn rounded-full gap-1 px-3 py-2.5 text-gray-700 hover:bg-gray-100 border-gray-200 flex items-center justify-center"
+              className="rounded-full gap-1 px-3 py-2.5 text-[#222222] border border-[#65358A26] flex items-center cursor-pointer"
             >
               <img src={flag} alt="US Flag" className="w-5 h-5 rounded-full" />
-              <span className="text-sm mt-1">Eng</span>
+              <span className="text-sm mt-1 tracking-wider">Eng</span>
               <ArrowDownIcon />
             </label>
             <ul
@@ -43,7 +50,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <button className="btn bg-[#2B153C] text-white rounded-full hover:bg-primary-focus text-lg px-[24px] py-3 font-medium tracking-wider">
+          <button className="inline-flex btn bg-[#2B153C] text-white rounded-full hover:bg-primary-focus text-lg px-6 py-3 font-medium tracking-wider">
             Logout
           </button>
         </div>
