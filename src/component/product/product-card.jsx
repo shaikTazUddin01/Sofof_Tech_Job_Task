@@ -25,9 +25,9 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        <button className="text-[16px] bg-[#4C4C4C] hover:bg-[#474747] cursor-pointer text-white py-2.5 px-[22px] rounded-full font-medium">
+        <span className="text-[16px] bg-[#4C4C4C] hover:bg-[#474747] cursor-pointer text-white py-[4px] px-[22px] rounded-full font-normal">
           Add to Cart
-        </button>
+        </span>
       </div>
     </a>
   );

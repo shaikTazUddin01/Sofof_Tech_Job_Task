@@ -17,7 +17,7 @@ const SubscribeSection = () => {
         <div className="inline-block">
           <span className="text-white bg-gradient-to-r from-[#65358A] to-[#2B153C] text-sm rounded-full flex items-center gap-1 py-[5px] px-[14px] tracking-wider cursor-pointer">
             <CheckmarkCircleIcon />
-            <p className="mt-1">Subscribe Now</p>
+            <p className="text-sm">Subscribe Now</p>
           </span>
         </div>
       </div>

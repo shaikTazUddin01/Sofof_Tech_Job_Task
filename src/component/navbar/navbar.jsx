@@ -50,8 +50,10 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <button className="inline-flex btn bg-[#2B153C] text-white 
-          rounded-full hover:bg-primary-focus text-lg px-6 py-3 font-medium tracking-wider">
+          <button
+            className="inline-flex btn bg-[#2B153C] text-white 
+          rounded-full hover:bg-primary-focus text-lg px-6 py-3 font-medium shadow-none tracking-wider"
+          >
             Logout
           </button>
         </div>
