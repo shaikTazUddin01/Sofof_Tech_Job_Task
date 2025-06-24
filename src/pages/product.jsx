@@ -1,5 +1,5 @@
 import { useGetProductsQuery } from "../redux/features/product.api";
-import ProductCard from "../component/product/product-card";
+import ProductCard from "../component/product/product_card";
 import {
   DollarIcon,
   DownArrowIcon,
@@ -16,6 +16,7 @@ const Product = () => {
   };
   return (
     <div className="max-w-[712px] mx-auto -mt-3">
+      {/* header section */}
       <header className="flex flex-col md:flex-row md:items-center justify-between mb-[10px] md:mb-[32px]">
         <span className="flex gap-5 items-center">
           <span
@@ -44,7 +45,7 @@ const Product = () => {
       <span className="bg-[#222222] text-white rounded-2xl text-[16px] font-medium tracking-wider px-[16px] py-[14px] flex md:inline-block justify-center">
         Providing Water
       </span>
-
+      {/* product section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-[32px] mb-[60px] md:mb-[90px]">
         {products?.map((product) => (
           <ProductCard key={product.id} product={product} />

@@ -10,7 +10,7 @@ import {
   LeftArrowIcon,
   RightIcon,
 } from "../assets/icons/icons";
-import ProductCard from "../component/product/product-card";
+import ProductCard from "../component/product/product_card";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -27,6 +27,7 @@ const ProductDetails = () => {
 
   return (
     <main className="max-w-[712px] w-full mx-auto px-2 xl:px-0">
+      {/* section header */}
       <header className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 -mt-4 gap-4">
         <div className="flex gap-2 lg:gap-5 items-center">
           <button
@@ -47,9 +48,9 @@ const ProductDetails = () => {
           <DownArrowIcon />
         </button>
       </header>
-
+      {/* product Details */}
       <section className="flex flex-col md:flex-row gap-8 mt-8 items-center">
-        <figure className="flex flex-col w-full md:w-[45%] gap-4 bg-[#F5F2F8] rounded-[30px] p-5 h-auto md:h-[366px] overflow-hidden">
+        <figure className="flex flex-col w-full md:w-[45%] gap-4 bg-[#F5F2F8] rounded-[33px] p-5 h-auto md:h-[366px] overflow-hidden">
           <img
             src={product.thumbnailImg}
             alt={product.name}
@@ -71,8 +72,9 @@ const ProductDetails = () => {
 
         <article className="w-full md:w-[58%]">
           <h2 className="text-[24px] font-medium">{product.name}</h2>
-          <p className="text-[#616161] mb-0.5 text-xl font-normal">
-            {product.details}
+          <p className="text-[#616161] ">{product.details}</p>
+          <p className="text-[#616161] mb-0.5 text-xl font-normal text-center flex items-center">
+            {product.size} ml • {product.quantity} bottles
           </p>
           <div className="text-center mb-2.5">
             <span className="font-medium text-[28px] tracking-wide flex items-center gap-1 justify-center md:justify-start">
@@ -98,23 +100,15 @@ const ProductDetails = () => {
               Key Features
             </h3>
             <ul className="list-disc list-inside text-[#616161] text-[16px] -space-y-0.5">
-             {
-              product?.features?.map((feature,idx)=>{
+              {product?.features?.map((feature, idx) => {
                 console.log(feature);
-                return(
-                  <li key={idx}>{feature}</li>
-                )
-              })
-             }
-              {/* <li>Advanced multi-stage filtration</li>
-              <li>BPA-free recyclable packaging</li>
-              <li>Perfect pH balance (7.0-7.5)</li>
-              <li>Convenient bulk packaging</li> */}
+                return <li key={idx}>{feature}</li>;
+              })}
             </ul>
           </section>
         </article>
       </section>
-
+      {/* similar product section */}
       <section className="mt-5">
         <div className="flex justify-between items-center mb-2 flex-wrap gap-2">
           <h3 className="text-[24px] font-medium tracking-wider p-0">

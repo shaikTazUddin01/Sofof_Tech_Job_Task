@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Slide1 from "../../assets/slider/1.png";
 import Slide2 from "../../assets/slider/2.png";
-import "./hero_section.css";
 import { NextIcon, PrevIcon } from "../../assets/icons/icons";
 
 const HeroSection = () => {

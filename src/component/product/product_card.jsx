@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
           {product.name}
         </h3>
 
-        <p className="text-[#616161] text-sm text-center mb-2 font-medium">
-          {product.details}
+        <p className="text-[#616161] text-sm text-center mb-2 font-medium flex items-center">
+          {product.size}{" "}ml • {product.quantity}{" "}bottles
         </p>
 
         <div className="text-center mb-2">

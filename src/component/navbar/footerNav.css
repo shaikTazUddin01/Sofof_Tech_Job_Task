@@ -18,7 +18,6 @@
 
 }
 
-/* Ensure HomeIcon stays above the ::before */
 .home-item {
   position: relative;
   z-index: 1;
