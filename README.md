@@ -1,4 +1,5 @@
 # Sofof Tech Job Task Project
+## Live Link  - [https://glittering-tulumba-e08ebe.netlify.app/](https://glittering-tulumba-e08ebe.netlify.app/)
 
 This project is a React-based web application that features a product catalog and product details pages.
 
@@ -16,7 +17,7 @@ This project is a React-based web application that features a product catalog an
 - Redux Toolkit
 - RTK Query
 - Tailwind CSS (assumed from class names)
-- Swiper for slider functionality
+- Custom slider functionality
 
 ## Project Structure
 

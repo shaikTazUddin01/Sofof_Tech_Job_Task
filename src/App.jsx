@@ -10,7 +10,7 @@ const App = () => {
       <div className="max-w-[1440px] mx-auto ">
         <Outlet />
       </div>
-      <div className="sticky bottom-0 z-20 mt-20">
+      <div className="sticky bottom-0 z-20 mt-[64px]">
         <FooterNavBar />
       </div>
     </div>

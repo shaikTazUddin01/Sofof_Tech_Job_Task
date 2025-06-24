@@ -26,7 +26,7 @@ const CategorySection = () => {
       <div className="flex justify-center items-center">
         <img src={img} alt="" className="w-[712px] h-[152px]" />
       </div>
-      <div className="flex gap-6 justify-center items-center mt-8">
+      <div className="grid md:grid-cols-3 gap-6 justify-center items-center mt-8 max-w-[648px] mx-auto">
         {categories?.map((category) => (
           <div className=" ">
             <a href={`/products`}>

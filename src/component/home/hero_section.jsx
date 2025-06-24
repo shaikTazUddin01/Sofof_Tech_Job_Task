@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Slide1 from "../../assets/slider/1.png";
 import Slide2 from "../../assets/slider/2.png";
 import "./hero_section.css";
@@ -7,8 +7,20 @@ import { NextIcon, PrevIcon } from "../../assets/icons/icons";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [transitionDirection, setTransitionDirection] = useState("next");
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const slides = [Slide1, Slide2, Slide1, Slide2];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const goToPrev = () => {
     setTransitionDirection("prev");
@@ -24,36 +36,38 @@ const HeroSection = () => {
     setTransitionDirection(index > currentSlide ? "next" : "prev");
     setCurrentSlide(index);
   };
-
   const getVisibleSlides = () => {
-    const visibleSlides = [];
-    const totalSlides = slides.length;
+    if (isSmallScreen) {
+      return [{ index: currentSlide, position: 0 }];
+    } else {
+      const visibleSlides = [];
+      const totalSlides = slides.length;
 
-    for (let i = -1; i <= 2; i++) {
-      let slideIndex = currentSlide + i;
-      if (slideIndex < 0) {
-        slideIndex = totalSlides + slideIndex;
-      } else if (slideIndex >= totalSlides) {
-        slideIndex = slideIndex - totalSlides;
+      for (let i = -1; i <= 2; i++) {
+        let slideIndex = currentSlide + i;
+        if (slideIndex < 0) {
+          slideIndex = totalSlides + slideIndex;
+        } else if (slideIndex >= totalSlides) {
+          slideIndex = slideIndex - totalSlides;
+        }
+        visibleSlides.push({
+          index: slideIndex,
+          position: i,
+        });
       }
-      visibleSlides.push({
-        index: slideIndex,
-        position: i,
-      });
+      return visibleSlides;
     }
-
-    return visibleSlides;
   };
 
-  // Calculate widths and positions
-  const gap = 1.5;
-  const partialWidth = 18.5;
-  const fullWidth = 30;
+  // Calculate widths and positions for lg screen
+  const lg_gap = 1.5;
+  const lg_partialWidth = 18.5;
+  const lg_fullWidth = 30;
 
   return (
     <div className="max-w-[1440px] mx-auto p-4">
       <div className="max-w-[712px] mx-auto">
-        <h1 className="text-[40px] tracking-wider font-bold -mt-6 text-[#222222]">
+        <h1 className="text-2xl lg:text-[32px] xl:text-[40px] tracking-wider font-bold -mt-8 md:-mt-6 text-[#222222]">
           Home
         </h1>
       </div>
@@ -63,25 +77,34 @@ const HeroSection = () => {
             {getVisibleSlides().map(({ index, position }) => (
               <div
                 key={`${index}-${currentSlide}`}
-                className={`absolute h-full  ${
-                  position === -1 || position === 2 ? "z-10" : "z-20"
+                className={`absolute h-full ${
+                  isSmallScreen ? "top-0 left-0 w-full" : "" // For small screen
+                } ${
+                  !isSmallScreen && (position === -1 || position === 2)
+                    ? "z-10"
+                    : "z-20"
                 } ${
                   transitionDirection === "next"
                     ? "animate-slide-in-next"
                     : "animate-slide-in-prev"
                 }`}
                 style={{
-                  width: `${
-                    position === -1 || position === 2 ? partialWidth : fullWidth
-                  }%`,
-                  left:
-                    position === -1
-                      ? "0"
-                      : position === 0
-                      ? `${partialWidth + gap}%`
-                      : position === 1
-                      ? `${partialWidth + fullWidth + 2 * gap}%`
-                      : `${partialWidth + 2 * fullWidth + 3 * gap}%`,
+                  // for lg screen
+                  ...(!isSmallScreen && {
+                    width: `${
+                      position === -1 || position === 2
+                        ? lg_partialWidth
+                        : lg_fullWidth
+                    }%`,
+                    left:
+                      position === -1
+                        ? "0"
+                        : position === 0
+                        ? `${lg_partialWidth + lg_gap}%`
+                        : position === 1
+                        ? `${lg_partialWidth + lg_fullWidth + 2 * lg_gap}%`
+                        : `${lg_partialWidth + 2 * lg_fullWidth + 3 * lg_gap}%`,
+                  }),
                   animationDuration: "500ms",
                   animationFillMode: "forwards",
                 }}
@@ -91,9 +114,9 @@ const HeroSection = () => {
                     src={slides[index]}
                     alt={`Slide ${index + 1}`}
                     className={`h-full w-full object-cover rounded-lg shadow-md ${
-                      position === -1
+                      !isSmallScreen && position === -1
                         ? "ml-auto"
-                        : position === 2
+                        : !isSmallScreen && position === 2
                         ? "mr-auto"
                         : ""
                     }`}
@@ -107,13 +130,13 @@ const HeroSection = () => {
         {/* Navigation arrows */}
         <button
           onClick={goToPrev}
-          className="absolute left-12 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
+          className="absolute left-4 md:left-6 lg:left-12 top-1/2 transform -translate-y-1/2 bg-white/90 text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
         >
           <PrevIcon />
         </button>
         <button
           onClick={goToNext}
-          className="absolute right-12 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
+          className="absolute right-4 md:right-6 lg:right-12 top-1/2 transform -translate-y-1/2 bg-white/90 text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
         >
           <NextIcon />
         </button>

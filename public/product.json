@@ -1,51 +1,98 @@
 [
-    {
-      "id": "prod001",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-    },
-    {
-      "id": "prod002",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-    },
-    {
-      "id": "prod003",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-    },
-    {
-      "id": "prod004",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-    },
-    {
-      "id": "prod005",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-
-    },
-    {
-      "id": "prod006",
-      "name": "5 Cartons",
-      "details": "330 ml • 20 bottles",
-      "price": 50.0,
-      "imageUrl": "/product/product.png",
-      "thumbnailImg": "/product/product2.png"
-    }
-  ]
+  {
+    "id": "prod001",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  },
+  {
+    "id": "prod002",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  },
+  {
+    "id": "prod003",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  },
+  {
+    "id": "prod004",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  },
+  {
+    "id": "prod005",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  },
+  {
+    "id": "prod006",
+    "name": "5 Cartons",
+    "details": "330 ml • 20 bottles",
+    "price": "50.0",
+    "imageUrl": "/product/product.png",
+    "thumbnailImg": "/product/product2.png",
+    "overview": "For this items it will be distribute in Haram and Around Haram from 1 Ramadan to 10 Ramadan",
+    "features": [
+      "100% natural spring water source",
+      "Advanced multi-stage filtration",
+      "BPA-free recyclable packaging",
+      "Perfect pH balance (7.0-7.5)",
+      "Convenient bulk packaging"
+    ]
+  }
+]

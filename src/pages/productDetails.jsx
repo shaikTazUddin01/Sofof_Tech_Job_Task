@@ -27,7 +27,7 @@ const ProductDetails = () => {
 
   return (
     <main className="max-w-[712px] w-full mx-auto px-2 xl:px-0">
-      <header className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 -mt-3 gap-4">
+      <header className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 -mt-4 gap-4">
         <div className="flex gap-2 lg:gap-5 items-center">
           <button
             className="px-[17px] py-[14px] bg-[#F3EFF6] rounded-full cursor-pointer"
@@ -53,18 +53,18 @@ const ProductDetails = () => {
           <img
             src={product.thumbnailImg}
             alt={product.name}
-            className="h-auto md:h-[195px] w-full md:w-[276px] object-contain"
+            className="h-auto md:h-[196px] w-full md:w-[276px] object-contain"
           />
           <figcaption className="flex gap-4 mt-3 justify-between w-full">
             <img
               src={product.imageUrl}
               alt="Thumb 1"
-              className="w-[160px] h-[105px] object-cover rounded-md"
+              className="w-[160px] h-[106px] object-cover rounded-md"
             />
             <img
               src={product.imageUrl}
               alt="Thumb 2"
-              className="w-[160px] h-[105px] object-cover rounded-md"
+              className="w-[160px] h-[106px] object-cover rounded-md"
             />
           </figcaption>
         </figure>
@@ -77,7 +77,7 @@ const ProductDetails = () => {
           <div className="text-center mb-2.5">
             <span className="font-medium text-[28px] tracking-wide flex items-center gap-1 justify-center md:justify-start">
               <CurrencyIcon />
-              {product.price}.0
+              {product.price}
             </span>
           </div>
           <button className="bg-[#616161] text-white px-5 py-1 rounded-full mb-[14px] text-[16px] w-full sm:w-auto">
@@ -88,9 +88,8 @@ const ProductDetails = () => {
             <h3 className="font-medium text-[16px] tracking-wider">
               Product Overview
             </h3>
-            <p className="text-[#616161] font-normal tracking-wide leading-[20px] mt-1 text-[16px]">
-              For this items it will be distribute in Haram and Around Haram
-              from 1 Ramadan to 10 Ramadan
+            <p className="text-[#616161] font-normal tracking-wide leading-[18px] mt-1 text-[16px]">
+              {product.overview}
             </p>
           </section>
 
@@ -99,11 +98,18 @@ const ProductDetails = () => {
               Key Features
             </h3>
             <ul className="list-disc list-inside text-[#616161] text-[16px] -space-y-0.5">
-              <li>100% natural spring water source</li>
-              <li>Advanced multi-stage filtration</li>
+             {
+              product?.features?.map((feature,idx)=>{
+                console.log(feature);
+                return(
+                  <li key={idx}>{feature}</li>
+                )
+              })
+             }
+              {/* <li>Advanced multi-stage filtration</li>
               <li>BPA-free recyclable packaging</li>
               <li>Perfect pH balance (7.0-7.5)</li>
-              <li>Convenient bulk packaging</li>
+              <li>Convenient bulk packaging</li> */}
             </ul>
           </section>
         </article>
