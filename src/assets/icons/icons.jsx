@@ -284,47 +284,18 @@ export const ProfileIcon = () => (
 
 export const LeftArrowIcon = () => (
   <svg
-    width="24"
-    height="25"
-    viewBox="0 0 24 25"
+    width="9"
+    height="15"
+    viewBox="0 0 9 15"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="24" height="25" fill="#D1D1D1" />
     <path
-      d="M-452 -225C-452 -226.105 -451.105 -227 -450 -227H1146C1147.1 -227 1148 -226.105 1148 -225V970C1148 971.105 1147.1 972 1146 972H-450C-451.105 972 -452 971.105 -452 970V-225Z"
-      fill="#222222"
+      d="M8 1.5L2 7.5L8 13.5"
+      stroke="#222222"
+      stroke-width="2.5"
+      stroke-miterlimit="16"
     />
-    <path
-      d="M-450 -227V-226H1146V-227V-228H-450V-227ZM1148 -225H1147V970H1148H1149V-225H1148ZM1146 972V971H-450V972V973H1146V972ZM-452 970H-451V-225H-452H-453V970H-452ZM-450 972V971C-450.552 971 -451 970.552 -451 970H-452H-453C-453 971.657 -451.657 973 -450 973V972ZM1148 970H1147C1147 970.552 1146.55 971 1146 971V972V973C1147.66 973 1149 971.657 1149 970H1148ZM1146 -227V-226C1146.55 -226 1147 -225.552 1147 -225H1148H1149C1149 -226.657 1147.66 -228 1146 -228V-227ZM-450 -227V-228C-451.657 -228 -453 -226.657 -453 -225H-452H-451C-451 -225.552 -450.552 -226 -450 -226V-227Z"
-      fill="black"
-      fill-opacity="0.1"
-    />
-    <g clip-path="url(#clip0_563_1524)">
-      <rect
-        width="1440"
-        height="1039"
-        transform="translate(-372 -147)"
-        fill="white"
-      />
-      <rect x="-8" y="-7.5" width="40" height="40" rx="20" fill="#F3EFF6" />
-      <path
-        d="M15 6.5L9 12.5L15 18.5"
-        stroke="#222222"
-        stroke-width="2.5"
-        stroke-miterlimit="16"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_563_1524">
-        <rect
-          width="1440"
-          height="1039"
-          fill="white"
-          transform="translate(-372 -147)"
-        />
-      </clipPath>
-    </defs>
   </svg>
 );
 

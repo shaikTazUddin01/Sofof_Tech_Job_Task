@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Slide1 from "../../assets/slider/1.png";
 import Slide2 from "../../assets/slider/2.png";
 import "./hero_section.css";
@@ -8,7 +8,7 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [transitionDirection, setTransitionDirection] = useState("next");
 
-  const slides = [Slide2, Slide1, Slide2, Slide1];
+  const slides = [Slide1, Slide2, Slide1, Slide2];
 
   const goToPrev = () => {
     setTransitionDirection("prev");
@@ -107,13 +107,13 @@ const HeroSection = () => {
         {/* Navigation arrows */}
         <button
           onClick={goToPrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
+          className="absolute left-12 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
         >
           <PrevIcon />
         </button>
         <button
           onClick={goToNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
+          className="absolute right-12 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full py-3 px-4 z-30 cursor-pointer"
         >
           <NextIcon />
         </button>

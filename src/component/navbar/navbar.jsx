@@ -7,10 +7,10 @@ import flag from "../../assets/icons/flag.svg";
 
 const Navbar = () => {
   return (
-    <div className="bg-base-100 pt-6 pb-10 px-6 xl:px-12 max-w-[1440px] mx-auto">
+    <div className="bg-white pt-6 pb-10 px-6 xl:px-12 max-w-[1440px] mx-auto">
       <nav className="navbar p-0 flex justify-between items-center">
         <div className="navbar-start flex items-center gap-2">
-          <button className="p-2 rounded-full cursor-pointer bg-[#F3EFF6]">
+          <button className="p-2 rounded-full cursor-pointer bg-[#F3EFF6] border border-[#65358A26]">
             <MenuIcon />
           </button>
           <div className="block lg:hidden">
@@ -37,7 +37,7 @@ const Navbar = () => {
               className="rounded-full gap-1 px-3 py-2.5 text-[#222222] border border-[#65358A26] flex items-center cursor-pointer"
             >
               <img src={flag} alt="US Flag" className="w-5 h-5 rounded-full" />
-              <span className="text-sm mt-1 tracking-wider">Eng</span>
+              <span className="text-sm tracking-wider">Eng</span>
               <ArrowDownIcon />
             </label>
             <ul
@@ -50,7 +50,8 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <button className="inline-flex btn bg-[#2B153C] text-white rounded-full hover:bg-primary-focus text-lg px-6 py-3 font-medium tracking-wider">
+          <button className="inline-flex btn bg-[#2B153C] text-white 
+          rounded-full hover:bg-primary-focus text-lg px-6 py-3 font-medium tracking-wider">
             Logout
           </button>
         </div>
