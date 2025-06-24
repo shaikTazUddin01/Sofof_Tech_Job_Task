@@ -18,14 +18,14 @@ const ProductCard = ({ product }) => {
           {product.details}
         </p>
 
-        <div className="text-center mb-3">
+        <div className="text-center mb-2">
           <span className="font-medium text-xl tracking-wide flex items-center justify-center gap-1">
             <CurrencyIcon />
             {product.price}
           </span>
         </div>
 
-        <button className="text-[16px] bg-[#4C4C4C] hover:bg-[#474747] cursor-pointer text-white py-2.5 px-[22px] rounded-full">
+        <button className="text-[16px] bg-[#4C4C4C] hover:bg-[#474747] cursor-pointer text-white py-2.5 px-[22px] rounded-full font-medium">
           Add to Cart
         </button>
       </div>

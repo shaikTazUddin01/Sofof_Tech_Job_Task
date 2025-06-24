@@ -6,8 +6,7 @@ import WhatsAppSection from "../component/home/whatsapp-message";
 const Home = () => {
   return (
     <div className="relative">
-      {/* <HeroArea /> */}
-      <HeroSection/>
+      <HeroSection />
       <CategorySection />
       {/* Right side */}
       <div className="absolute right-12 -bottom-[66px] z-10">

@@ -1,0 +1,31 @@
+.custom-border {
+  position: relative;
+  background: white;
+  z-index: 0;
+}
+
+.custom-border::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 65px;
+  height: 58px;
+  border: 3px solid #65358A;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-right: none;
+  z-index: -1;
+  background: transparent;
+}
+
+/* Ensure HomeIcon stays above the ::before */
+.home-item {
+  position: relative;
+  z-index: 1;
+}
+
+.navArea {
+  box-shadow: 0px 0px 6px -4px;
+}
