@@ -1,5 +1,5 @@
 # Sofof Tech Job Task Project
-## Live Link  - [https://glittering-tulumba-e08ebe.netlify.app/](https://glittering-tulumba-e08ebe.netlify.app/)
+## Live Link  - [https://sofof-tech-job-task.netlify.app/](https://sofof-tech-job-task.netlify.app/)
 
 This project is a React-based web application that features a product catalog and product details pages.
 
