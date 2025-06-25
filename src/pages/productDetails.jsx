@@ -50,7 +50,7 @@ const ProductDetails = () => {
       </header>
       {/* product Details */}
       <section className="flex flex-col md:flex-row gap-8 mt-8 items-center">
-        <figure className="flex flex-col w-full md:w-[45%] gap-4 bg-[#F5F2F8] rounded-[33px] p-5 h-auto md:h-[366px] overflow-hidden">
+        <figure className="flex flex-col w-full md:w-[48%] gap-4 bg-[#F5F2F8] rounded-[33px] p-5 h-auto md:h-[366px] overflow-hidden">
           <img
             src={product.thumbnailImg}
             alt={product.name}
@@ -87,22 +87,22 @@ const ProductDetails = () => {
           </button>
 
           <section>
-            <h3 className="font-medium text-[16px] tracking-wider">
-              Product Overview
-            </h3>
-            <p className="text-[#616161] font-normal tracking-wide leading-[18px] mt-1 text-[16px]">
+            <h3 className="font-medium text-[16px]">Product Overview</h3>
+            <p className="text-[#616161] font-normal leading-[18px] mt-1 text-[16px]">
               {product.overview}
             </p>
           </section>
 
           <section>
-            <h3 className="font-medium text-[16px] tracking-wider mt-4">
-              Key Features
-            </h3>
-            <ul className="list-disc list-inside text-[#616161] text-[16px] -space-y-0.5">
+            <h3 className="font-medium text-[16px] mt-4">Key Features</h3>
+            <ul className="list-none list-inside text-[#616161] text-[16px] -space-y-[4px]">
               {product?.features?.map((feature, idx) => {
-                console.log(feature);
-                return <li key={idx}>{feature}</li>;
+                return (
+                  <li key={idx} className="flex gap-2 items-center">
+                    <span className="h-1 w-1 bg-[#616161] rounded-full"></span>
+                    <p>{feature}</p>
+                  </li>
+                );
               })}
             </ul>
           </section>
